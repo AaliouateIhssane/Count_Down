@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OrchestraModelStoreContainer" CdmEntityContainer="OrchestraEntities">
+    <EntitySetMapping Name="registreds">
+      <EntityTypeMapping TypeName="OrchestraModel.registred">
+        <MappingFragment StoreEntitySet="registred">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="job" ColumnName="job" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supports">
+      <EntityTypeMapping TypeName="OrchestraModel.support">
+        <MappingFragment StoreEntitySet="support">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="sub" ColumnName="sub" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TP2_dbModelStoreContainer" CdmEntityContainer="TP2_dbEntities">
+    <EntitySetMapping Name="Msgs">
+      <EntityTypeMapping TypeName="TP2_dbModel.Msg">
+        <MappingFragment StoreEntitySet="Msg">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="mssg" ColumnName="mssg" />
+          <ScalarProperty Name="DateM" ColumnName="DateM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registers">
+      <EntityTypeMapping TypeName="TP2_dbModel.register">
+        <MappingFragment StoreEntitySet="register">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="DateR" ColumnName="DateR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

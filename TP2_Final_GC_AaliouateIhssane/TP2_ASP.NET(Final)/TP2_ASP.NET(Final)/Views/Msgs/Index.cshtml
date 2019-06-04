@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TP2_ASP.NET_Final_.Models.Msg>
+
+@{
+    ViewBag.Title = "Messages";
+    Layout = "~/Views/Shared/PageDisposition.cshtml";
+}
+
+
+
+
+<div class="pcoded-inner-content">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <!-- [ page content ] start -->
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="card table-card review-card" style="width:800px">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        User Name
+                                    </th>
+                                    <th>
+                                        Message
+                                    </th>
+                                    <th>
+                                        Date Message
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Email)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.UserName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.mssg)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DateM)
+                                        </td>
+                                        <td>
+
+                                            @Html.ActionLink("Read", "Details", new { id = item.id }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

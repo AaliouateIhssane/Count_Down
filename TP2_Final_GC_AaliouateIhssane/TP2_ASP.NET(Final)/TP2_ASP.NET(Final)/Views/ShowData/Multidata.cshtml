@@ -1,0 +1,212 @@
+﻿@model TP2_ASP.NET_Final_.ViewModel.Multipledata
+
+@{
+    ViewBag.Title = "Multidata";
+    Layout = "~/Views/Shared/PageDisposition.cshtml";
+}
+
+
+<div class="pcoded-inner-content">
+    <div class="main-body">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <!-- [ page content ] start -->
+                <div class="row">
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Users stats</h3>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li>
+                                        <li><i class="feather icon-maximize full-card"></i></li>
+                                        <li><i class="feather icon-minus minimize-card"></i></li>
+                                        <li><i class="feather icon-refresh-cw reload-card"></i></li>
+                                        <li><i class="feather icon-trash close-card"></i></li>
+                                        <li><i class="feather icon-chevron-left open-card-option"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="bg-c-blue" style="height:50px">
+                                    <div class="row align-items-center" style="margin-top:12px">
+                                        <div class="col-9 text-center">
+                                            <p class="text-white m-b-0">TOTAL VISITS</p>
+                                        </div>
+                                        <div class="col-3 text-center" style="margin-top:12px">
+                                            <label class="text-white">127</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="bg-c-green" style="height:50px">
+                                    <div class="row align-items-center">
+                                        <div class="col-9 text-center" style="margin-top:12px">
+                                            <p class="text-white m-b-0">TOTAL REGISTRATIONS</p>
+                                        </div>
+                                        <div class="col-3 text-center" style="margin-top:12px">
+                                            <label class="text-white">2</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="bg-c-orenge" style="height:50px">
+                                    <div class="row align-items-center">
+                                        <div class="col-9 text-center" style="margin-top:12px">
+                                            <p class="text-white m-b-0">TOTAL VISITORS</p>
+                                        </div>
+                                        <div class="col-3 text-center" style="margin-top:12px">
+                                            <label class="text-white">2</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card table-card review-card">
+                            <div class="card-header borderless ">
+                                <h5>Recent registrations</h5>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li>
+                                        <li><i class="feather icon-maximize full-card"></i></li>
+                                        <li><i class="feather icon-minus minimize-card"></i></li>
+                                        <li><i class="feather icon-refresh-cw reload-card"></i></li>
+                                        <li><i class="feather icon-trash close-card"></i></li>
+                                        <li><i class="feather icon-chevron-left open-card-option"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="review-block">
+                                    <div class="row">
+                                        <div class="table">
+                                            @{WebGrid obj1 = new WebGrid(source: Model.registersss, canPage: true, rowsPerPage: 5, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                                                obj1.Pager(WebGridPagerModes.All); }
+                                            @obj1.GetHtml(tableStyle: "webGrid",
+                                                         headerStyle: "header",
+                                                         alternatingRowStyle: "alt",
+                                                         selectedRowStyle: "select",
+                                                         columns: obj1.Columns(
+                                                         obj1.Column("UserName", "UserName"),
+                                                         obj1.Column("job", "job"),
+                                                         obj1.Column("DateR", "DateR")))
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card table-card review-card">
+                            <div class="card-header borderless ">
+                                <h5>Recent Messages</h5>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li>
+                                        <li><i class="feather icon-maximize full-card"></i></li>
+                                        <li><i class="feather icon-minus minimize-card"></i></li>
+                                        <li><i class="feather icon-refresh-cw reload-card"></i></li>
+                                        <li><i class="feather icon-trash close-card"></i></li>
+                                        <li><i class="feather icon-chevron-left open-card-option"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="review-block">
+                                    <div class="row">
+                                        <div class="table">
+                                            @{WebGrid obj = new WebGrid(source: Model.Msgsss, canPage: true, rowsPerPage: 5, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+                                                obj.Pager(WebGridPagerModes.All); }
+                                            @obj.GetHtml(tableStyle: "webGrid",
+                                                         headerStyle: "header",
+                                                         alternatingRowStyle: "alt",
+                                                         selectedRowStyle: "select",
+                                                         columns: obj.Columns(
+                                                         obj.Column("UserName", "UserName"),
+                                                         obj.Column("Email", "Email"),
+                                                         obj.Column("DateM", "DateM")))
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card" style="width:320px">
+                            <div class="card-header" style="background:#07074e">
+                                <div class="row align-items-center">
+
+                                    <div class="col-8 text-center"><a href="#"><i class="fab fa-facebook "></i></a></div>
+                                    <div class="col-12 text-center" style="margin-top:-24px"><h6 class="text-white m-b-0">Facebook</h6></div>
+
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div style="height:55px">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 text-center" style="margin-top:-2%">
+                                            <p>
+                                                <h4 class="text-blue m-b-0" style="color:darkblue">21836</h4>
+                                                <h6 class="text-darkblue m-b-0">LIKES</h6>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6" style="margin-left:-3%">
+                            <div class="card" style="width:320px">
+                                <div class="card-header" style="background:#77aafff0">
+                                    <div class="row align-items-center">
+
+                                        <div class="col-9 text-center"><a href="#"><i class="fab fa-twitter "></i></a></div>
+                                        <div class="col-12 text-center" style="margin-top:-24px"><h6 class="text-white m-b-0">Twitter</h6></div>
+
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <div style="height:55px">
+                                        <div class="row align-items-center">
+                                            <div class="col-12 text-center" style="margin-top:-2%">
+                                                <p>
+                                                    <h4 class="text-blue m-b-0" style="color:#77aafff0">8613</h4>
+                                                    <h6 class="text-darkblue m-b-0">FOLLOWERS</h6>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+               
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/all.js"></script>
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TP2_Final_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="register">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="job" Type="varchar" MaxLength="20" />
+    <Property Name="Photo" Type="varchar" MaxLength="30" />
+    <Property Name="DateR" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TP2_Final_dbModelStoreContainer">
+    <EntitySet Name="register" EntityType="Self.register" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

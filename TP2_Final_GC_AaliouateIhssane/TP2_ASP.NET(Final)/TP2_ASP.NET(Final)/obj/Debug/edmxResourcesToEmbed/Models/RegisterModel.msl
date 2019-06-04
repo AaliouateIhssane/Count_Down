@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TP2_Final_dbModelStoreContainer" CdmEntityContainer="TP2_Final_dbEntities">
+    <EntitySetMapping Name="registers">
+      <EntityTypeMapping TypeName="TP2_Final_dbModel.register">
+        <MappingFragment StoreEntitySet="register">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="DateR" ColumnName="DateR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

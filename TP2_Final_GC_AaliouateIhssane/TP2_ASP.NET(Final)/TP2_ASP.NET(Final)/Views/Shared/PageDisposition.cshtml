@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/Content/icon/feather/css/feather.css">
+
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css">
+</head>
+<body>
+
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-bar"></div>
+    </div>
+    <!-- [ Pre-loader ] end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            <!-- [ Header ] start -->
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+                    <div class="navbar-logo">
+                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                            <i class="feather icon-toggle-right"></i>
+                        </a>
+                        <a href="index.html">
+                            <p style="font-family:Georgia; font-size: 20px; margin-top: 10px">Orchestra</p>
+                        </a>
+                        <a class="mobile-options waves-effect waves-light">
+                            <i class="feather icon-more-horizontal"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                    <i class="full-screen feather icon-maximize"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                            <li class="header-notification">
+                                <div class="dropdown-primary dropdown">
+                                    <div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+                                        <i class="feather icon-message-square"></i>
+                                        <span class="badge bg-c-green">2</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header-notification">
+                                <div class="dropdown-primary dropdown">
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="feather icon-bell"></i>
+                                        <span class="badge bg-c-red">2</span>
+                                    </div>
+                                    <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                        <li>
+                                            <h6>Notifications</h6>
+                                            <label class="label label-danger">New</label>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="img-radius" src="~/User-images/3D.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Amina</h5>
+                                                    <p class="notification-msg">Amina was registered in your site.</p>
+                                                    <span class="notification-time">3 days ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="img-radius" src="~/User-images/50.jpg" alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Salma</h5>
+                                                    <p class="notification-msg">Salma was registered in your site.</p>
+                                                    <span class="notification-time">5 days ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="user-profile header-notification">
+                                <div class="dropdown-primary dropdown">
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        <img src="~/Content/images/David.jpg" style="height:40px;" class="img-radius" alt="User-Profile-Image">
+                                        <span>David Garrett</span>
+                                        <i class="feather icon-chevron-down"></i>
+                                    </div>
+                                    <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+
+                                        <li>
+                                            <a href="~/Profile/Index">
+                                                <i class="feather icon-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/Login/Logout">
+                                                <i class="feather icon-log-out"></i> Logout
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <!-- [ chat user list ] start -->
+            <div id="sidebar" class="users p-chat-user showChat">
+                <div class="had-container">
+                    <div class="p-fixed users-main">
+                        <div class="user-box">
+                            <div class="chat-search-box">
+                                <a class="back_friendlist">
+                                    <i class="feather icon-x"></i>
+                                </a>
+                                <div class="right-icon-control">
+                                    <form class="form-material">
+                                        <div class="form-group form-primary">
+                                            <input type="text" name="footer-email" class="form-control" id="search-friends" required="">
+                                            <span class="form-bar"></span>
+                                            <label class="float-label">
+                                                <i class="feather icon-search m-r-10"></i>Search Friend
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="main-friend-list">
+                                <div class="media userlist-box waves-effect waves-light" data-id="1" data-status="online" data-username="Josephin Doe">
+                                    <a class="media-left" href="#!">
+                                        <img class="media-object img-radius img-radius" src="~/User-images/3D.jpg" alt="Generic placeholder image ">
+                                        <div class="live-status bg-success"></div>
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="chat-header">Amina</div>
+                                    </div>
+                                </div>
+                                <div class="media userlist-box waves-effect waves-light" data-id="2" data-status="online" data-username="Lary Doe">
+                                    <a class="media-left" href="#!">
+                                        <img class="media-object img-radius" src="~/User-images/50.jpg" alt="Generic placeholder image">
+                                        <div class="live-status bg-success"></div>
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="f-13 chat-header">Salma</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- [ chat message ] end -->
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <!-- [ navigation menu ] start -->
+                    <nav class="pcoded-navbar">
+                        <div class="pcoded-inner-navbar main-menu">
+                            <div class="">
+                                <div class="main-menu-header">
+                                    <img class="img-menu-user img-radius" style="height:60px;" src="~/Content/images/David.jpg" alt="User-Profile-Image">
+                                    <div class="user-details">
+                                        <H2 id="more-details">David Garrett</H2>
+                                        <H4>Admin</H4>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="pcoded-hasmenu ">
+                                    <a href="~/ShowData/Multidata" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-clock"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Dashboard</span>
+                                    </a>
+
+                                </li>
+                                <li class="pcoded-hasmenu ">
+                                    <a href="~/registers/Index" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-user"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Registrations</span>
+                                    </a>
+
+                                </li>
+                                <li class="pcoded-hasmenu ">
+                                    <a href="~/Msgs/Index" class="waves-effect waves-dark">
+                                        <span class="pcoded-micon">
+                                            <i class="feather icon-mail"></i>
+                                        </span>
+                                        <span class="pcoded-mtext">Messages</span>
+                                    </a>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <!-- [ navigation menu ] end -->
+
+
+                    <div class="pcoded-content">
+                        <div class="page-header">
+                            <div class="page-block">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <div>
+                                                @RenderBody()
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="~/Scripts/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-ui/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/popper.js/js/popper.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap/js/bootstrap.min.js"></script>
+    <!-- waves js -->
+    <script src="~/Content/pages/waves/js/waves.min.js"></script>
+    <!-- jquery slimscroll js-->
+    <script type="text/javascript" src="~/Scripts/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+
+
+
+    <!-- Custom js -->
+    <script src="~/Scripts/js/pcoded.min.js"></script>
+    <script src="~/Scripts/js/vertical/vertical-layout.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/script.min.js"></script>
+</body>
+</html>
